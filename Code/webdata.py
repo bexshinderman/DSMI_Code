@@ -6,7 +6,7 @@ Created on Thu Mar 12 10:46:41 2020
 """
 
 import requests
-response = requests.get('http://example.com')
+response = requests.get('http://google.com')
 print(response.request.url)
 print("\n",response.request.headers)
 list1 = dir(response.request)
