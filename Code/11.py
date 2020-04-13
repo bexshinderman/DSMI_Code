@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 from sklearn.utils import shuffle
 
+
 data = pd.read_csv('churn.csv', index_col=0)
 #print(data.head())
 feature_col  = data.keys()
@@ -21,6 +22,9 @@ y = np.array(data[target])
 X, y = shuffle(X, y, random_state=1)
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.33)
+
+
+
 
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
